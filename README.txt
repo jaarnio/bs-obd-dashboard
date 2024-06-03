@@ -1,52 +1,15 @@
-This instruction file should be properly written, and would mirror the readme on GitHub if this is hosted.
+dist folder has ready to run files.
 
-This is a pre-made starter Node project that can be run on a BrightSign. 
+Connect the ELM327 OBD Reader to the USB-A port of the player and power on vehicle first.
 
-This is designed for a browser / on-screen presentation.
+OBD JS.bpfx should be opened in BA:con.  Link in the server.js as a Support File, and link the index.html site for the main HTML Widget Zone.
+Publish to player while vehicle is running.
 
-It has webpack already configured to create a folder with everything that needs to be copied to a BrightSign SD Card, or added to an HTML Widget in BrightAuthor / BrightAuthor:connected.
+The server.js will connect to the OBD port via serial and will retreive PIDs, and send to the front end via Websocket.  The HTML page uses a Guage library to visualize the incoming data stream.
 
-Ensure you have Node installed.
-
----------------------------------------------------------
-To use:
-
-Open project. Run "npm install" in terminal. This will download dependencies.
-
-Work from the SRC folder
-
-SRC
----
-assets
-	|_BrightSignLogo-175x85.png
-fonts
-	|_font-placeholder.ttf
-scripts
-	|_scripts.js
-styles
-	|_style.css
-index.html
----
-
-Edit the html, css and js files to build your app.  Load media items into the assets folder. Install additional Node modules as needed.  
-
----------------------------------------------------------
-To publish / distribute:
-
-When ready, run command "webpack" from terminal.
-This will package up the project into the DIST folder, with the same subfolder structure.  Additionally, webpack will continue to run and "watch" your SRC folder for any changes, and will automatically rebuild your DIST folder.
-Copy the contents of the DIST folder to your SD Card, or publish to an HTML Widget in BA / BA:con.
-If copying to an SD card, use the "autorun.brs" found in the OPT folder.
-
-DIST
----
-assets
-	|_BrightSignLogo-175x85.png
-fonts
-	|_font-placeholder.ttf
-scripts
-	|_scripts.js
-styles
-	|_style.css
-index.html
----
+Currently supports:
+{ name: "Fuel", delimiter: "2F", length: 2 },
+{ name: "RPM", delimiter: "0C", length: 4 },
+{ name: "Speed", delimiter: "0D", length: 2 },
+{ name: "Temperature", delimiter: "67", length: 6 },
+{ name: "Voltage", delimiter: "42", length: 4 }
