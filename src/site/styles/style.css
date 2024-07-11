@@ -1,0 +1,46 @@
+body {
+  height: 1080px;
+  width: 1920px;
+  margin: 0;
+  background-color: #101010;
+}
+
+#speed {
+  position: absolute;
+  top: 90px;
+  left: 57px;
+}
+
+#rpm {
+  position: absolute;
+  top: 90px;
+  left: 1160px;
+}
+
+#temp {
+  position: absolute;
+  left: 1465px;
+  top: 645px;
+}
+
+#fuel {
+  position: absolute;
+  top: 645px;
+  left: 1035px;
+}
+
+canvas {
+  margin: 20px;
+}
+
+.fuel-icon {
+  position: absolute;
+  top: 895px;
+  left: 944px;
+}
+
+.temp-icon {
+  position: absolute;
+  top: 895px;
+  left: 1419px;
+}
