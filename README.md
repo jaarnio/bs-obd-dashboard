@@ -13,3 +13,4 @@ Currently supports:
 { name: "Speed", delimiter: "0D", length: 2 },
 { name: "Temperature", delimiter: "67", length: 6 },
 { name: "Voltage", delimiter: "42", length: 4 }
+
