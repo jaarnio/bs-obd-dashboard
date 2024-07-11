@@ -1,6 +1,6 @@
 {
   "meta": {
-    "brightAuthorVersion": "1.37.1",
+    "brightAuthorVersion": "1.30.0",
     "buildType": "Standard"
   },
   "bsdm": {
@@ -498,7 +498,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2024-07-11T02:19:51.953Z"
+      "lastModifiedTime": "2024-07-11T15:05:37.881Z"
     },
     "zones": {
       "zonesById": {
@@ -726,10 +726,6 @@
       "commandsById": {},
       "sequencesById": {}
     },
-    "userDefinedEvents": {
-      "userDefinedEventsById": {},
-      "sequence": []
-    },
     "htmlSites": {
       "3eee60e5-e9c8-4000-a294-62f0065f4000": {
         "id": "3eee60e5-e9c8-4000-a294-62f0065f4000",
@@ -776,25 +772,25 @@
       "ee8d6f26-03d7-4000-a08e-4136d9004000": {
         "id": "ee8d6f26-03d7-4000-a08e-4136d9004000",
         "name": "index.html",
-        "path": "/Users/johnaarnio/Downloads/Borderlands Dashboard/dist/site/",
+        "path": "P:\\BrightSign\\BrightSign Dev\\bs-obd-dashboard\\dist\\site\\",
         "networkId": 0,
         "location": "Local",
         "assetType": "HtmlSite",
-        "scope": "a04aa10dc234825d",
-        "locator": "file:///Users/johnaarnio/Downloads/Borderlands Dashboard/dist/site/index.html",
-        "fileSize": 6919,
-        "lastModifiedDate": "2024-07-11T02:16:49.749Z",
+        "scope": "9560ed3374e2cc1c",
+        "locator": "file://\\P:\\BrightSign\\BrightSign Dev\\bs-obd-dashboard\\dist\\site\\index.html",
+        "fileSize": 6917,
+        "lastModifiedDate": "2024-07-11T15:02:59.404Z",
         "refCount": 1
       },
       "4ea76c03-a992-4000-a468-8388c38c0000": {
         "id": "4ea76c03-a992-4000-a468-8388c38c0000",
         "name": "server.js",
-        "path": "/Users/johnaarnio/Downloads/Borderlands Dashboard/dist/server/",
+        "path": "P:\\BrightSign\\BrightSign Dev\\bs-obd-dashboard\\dist\\server\\",
         "networkId": 0,
         "location": "Local",
         "assetType": "HtmlSite",
-        "scope": "a04aa10dc234825d",
-        "locator": "file:///Users/johnaarnio/Downloads/Borderlands Dashboard/dist/server/server.js",
+        "scope": "9560ed3374e2cc1c",
+        "locator": "file://\\P:\\BrightSign\\BrightSign Dev\\bs-obd-dashboard\\dist\\server\\server.js",
         "fileSize": 64560,
         "lastModifiedDate": "2024-06-02T21:50:17.596Z",
         "refCount": 1
@@ -848,9 +844,9 @@
     },
     "viewTransformByZoneId": {
       "957b85af-64be-4000-a0fe-a9ab62f85000": {
-        "x": 0,
-        "y": 0,
-        "k": 1
+        "x": 690.1367874248828,
+        "y": 236.00000000000006,
+        "k": 1.5
       }
     },
     "isLoaderEnabled": false
