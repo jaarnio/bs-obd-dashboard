@@ -14,3 +14,4 @@ Currently supports:
 { name: "Temperature", delimiter: "67", length: 6 },
 { name: "Voltage", delimiter: "42", length: 4 }
 
+<img width="1435" alt="image (1)" src="https://github.com/jaarnio/bs-obd-dashboard/assets/46546462/dfa7cbb6-7eb4-4c5a-9527-09e74060aab8">
