@@ -24,13 +24,15 @@ const options = {
 
 const port = new SerialPort(path, options);
 const parser = port.pipe(new Readline({ delimiter: "\r" }));
+const obdCommand = "010C";
+const obdCombined = "012F0C0D6742";
 
 port.on("open", () => {
   console.log("Port is open");
 
   // Send command every 1 second
   setInterval(() => {
-    port.write("012F0C0D6742\r", (err) => {
+    port.write(obdCommand + "\r", (err) => {
       if (err) {
         return console.log("Error on write: ", err.message);
       }
@@ -40,12 +42,19 @@ port.on("open", () => {
 
 let responseLines = [];
 let expectedIndex = 0;
+let responseObject = {};
 
 parser.on("data", (data) => {
   console.log(typeof data, "Data:", data);
+  // RPM Test
+  if (data.includes("41 0C")) {
+    const rpm = parseInt(data.split(" ")[2] + data.split(" ")[3], 16) / 4;
+    responseObject["RPM"] = rpm;
+    console.log("RPM:", rpm);
+  }
 
   // Regular expression to match the expected pattern
-  const pattern = /^\d+: ([0-9A-Fa-f]{2} )+/;
+  /*const pattern = /^\d+: ([0-9A-Fa-f]{2} )+/;
 
   // If the data does not match the expected pattern, skip processing
   if (!pattern.test(data)) {
@@ -153,16 +162,16 @@ parser.on("data", (data) => {
     }
 
     console.log("Final Response Object:", responseObject);
+*/
+  // Send responseObject to all WebSocket clients
+  wss.clients.forEach((client) => {
+    if (client.readyState === WebSocket.OPEN) {
+      client.send(JSON.stringify(responseObject));
+    }
+  });
 
-    // Send responseObject to all WebSocket clients
-    wss.clients.forEach((client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(JSON.stringify(responseObject));
-      }
-    });
-
-    // Reset responseLines and expectedIndex for the next set of lines
-    responseLines = [];
-    expectedIndex = 0;
-  }
+  // Reset responseLines and expectedIndex for the next set of lines
+  //responseLines = [];
+  //expectedIndex = 0;
+  //}
 });

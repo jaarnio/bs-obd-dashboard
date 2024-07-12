@@ -498,7 +498,7 @@
         }
       },
       "wssDeviceSpec": {},
-      "lastModifiedTime": "2024-07-11T02:19:51.953Z"
+      "lastModifiedTime": "2024-07-12T19:19:01.861Z"
     },
     "zones": {
       "zonesById": {
@@ -738,7 +738,7 @@
         "queryString": {
           "params": []
         },
-        "indexAssetId": "ee8d6f26-03d7-4000-a08e-4136d9004000",
+        "indexAssetId": "08ae99d6-17c4-4000-a8e3-5cc5d7a63000",
         "enableNode": false
       }
     },
@@ -746,7 +746,7 @@
       "cae78889-c9c3-4000-a120-e25692fdd000": {
         "id": "cae78889-c9c3-4000-a120-e25692fdd000",
         "name": "server",
-        "indexAssetId": "4ea76c03-a992-4000-a468-8388c38c0000"
+        "indexAssetId": "c6d9bf2d-28a4-4000-a70f-eb326a8fe000"
       }
     },
     "dataFeeds": {
@@ -773,30 +773,30 @@
     "customAutorun": "0",
     "bmapSpec": "0",
     "assetMap": {
-      "ee8d6f26-03d7-4000-a08e-4136d9004000": {
-        "id": "ee8d6f26-03d7-4000-a08e-4136d9004000",
+      "08ae99d6-17c4-4000-a8e3-5cc5d7a63000": {
+        "id": "08ae99d6-17c4-4000-a8e3-5cc5d7a63000",
         "name": "index.html",
-        "path": "/Users/johnaarnio/Downloads/Borderlands Dashboard/dist/site/",
+        "path": "/Users/johnaarnio/Downloads/OBD Github/dist/site/",
         "networkId": 0,
         "location": "Local",
         "assetType": "HtmlSite",
         "scope": "a04aa10dc234825d",
-        "locator": "file:///Users/johnaarnio/Downloads/Borderlands Dashboard/dist/site/index.html",
-        "fileSize": 6919,
-        "lastModifiedDate": "2024-07-11T02:16:49.749Z",
+        "locator": "file:///Users/johnaarnio/Downloads/OBD Github/dist/site/index.html",
+        "fileSize": 6917,
+        "lastModifiedDate": "2024-07-12T19:17:46.584Z",
         "refCount": 1
       },
-      "4ea76c03-a992-4000-a468-8388c38c0000": {
-        "id": "4ea76c03-a992-4000-a468-8388c38c0000",
+      "c6d9bf2d-28a4-4000-a70f-eb326a8fe000": {
+        "id": "c6d9bf2d-28a4-4000-a70f-eb326a8fe000",
         "name": "server.js",
-        "path": "/Users/johnaarnio/Downloads/Borderlands Dashboard/dist/server/",
+        "path": "/Users/johnaarnio/Downloads/OBD Github/dist/server/",
         "networkId": 0,
         "location": "Local",
         "assetType": "HtmlSite",
         "scope": "a04aa10dc234825d",
-        "locator": "file:///Users/johnaarnio/Downloads/Borderlands Dashboard/dist/server/server.js",
-        "fileSize": 64560,
-        "lastModifiedDate": "2024-06-02T21:50:17.596Z",
+        "locator": "file:///Users/johnaarnio/Downloads/OBD Github/dist/server/server.js",
+        "fileSize": 64552,
+        "lastModifiedDate": "2024-07-12T19:17:46.583Z",
         "refCount": 1
       }
     },
@@ -818,7 +818,14 @@
       "selectableType": "ZONE"
     },
     "selectionEntities": {},
-    "prevSelectionEntities": {},
+    "prevSelectionEntities": {
+      "b32734be-ba81-4000-adf8-01d896cec000": {
+        "id": "b32734be-ba81-4000-adf8-01d896cec000",
+        "type": "Html",
+        "selectableType": "STATE",
+        "selectableData": null
+      }
+    },
     "isEventAdvancedEnabled": false,
     "activeAssetMenuTab": "WIDGETS"
   },
@@ -848,8 +855,8 @@
     },
     "viewTransformByZoneId": {
       "957b85af-64be-4000-a0fe-a9ab62f85000": {
-        "x": 0,
-        "y": 0,
+        "x": 312,
+        "y": 78,
         "k": 1
       }
     },
