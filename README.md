@@ -1,5 +1,7 @@
 OBD Vehicle Dashboard for BrightSign
 
+![elm-plus--brightsign](https://github.com/user-attachments/assets/3151031a-29db-48a9-adcc-e0cacef8938a)
+
 Connect ELM327 to vehicle and power on vehicle.
 Connect the ELM327 OBD Reader to the USB-A port of BrightSign player and power on.
 
