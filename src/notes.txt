@@ -68,3 +68,16 @@ Combined Return Message:
 0D = 00
 67 = 03 84 78
 42 = 37 91
+
+Single Command / Response Pairs:
+Speed:
+010D\r -> 41 0D 00
+
+RPM:
+010C\r -> 41 0C 0B 24
+
+Fuel:
+012F\r -> 41 2F 23 
+
+Temp:
+0167\r -> 41 67 03 80 67
