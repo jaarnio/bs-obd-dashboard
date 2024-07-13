@@ -1,4 +1,4 @@
-dist folder has ready to run files.
+src folder has ready to run files.
 
 Connect the ELM327 OBD Reader to the USB-A port of the player and power on vehicle first.
 
