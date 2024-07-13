@@ -2,7 +2,7 @@ dist folder has ready to run files.
 
 Connect the ELM327 OBD Reader to the USB-A port of the player and power on vehicle first.
 
-OBD JS.bpfx should be opened in BA:con.  
+OBD Dashboard.bpfx should be opened in BA:con.  
 Link in the index.html site for the main HTML Widget Zone.
 Publish to player while vehicle is running.
 
