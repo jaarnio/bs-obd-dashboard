@@ -162,7 +162,7 @@ function main() {
   }).draw();
 
   const serialPort = new BSSerialPort(2);
-  serialPort.SetBaudRate(38400);
+  serialPort.SetBaudRate(10400);
   serialPort.SetDataBits(8);
   serialPort.SetStopBits(1);
   serialPort.SetParity("none");
@@ -267,14 +267,14 @@ function main() {
           console.log(`${value} command sent successfully.`);
         }
       });
-      await pause(100); // Wait for 300ms before sending the next command
+      await pause(1000); // Wait for 300ms before sending the next command
     }
     isWriting = false;
   }
 
   setInterval(() => {
     writeCommandsSequentially();
-  }, 500);
+  }, 5000);
 }
 
 window.main = main;
