@@ -163,7 +163,7 @@ function main() {
 
   serialPort.onserialline = function (e) {
     let data = e.sdata;
-    console.log(typeof data, "Data:", data);
+    console.log("Received:", data, "(", typeof data, ")");
     // Remove spaces and convert to uppercase for consistency
     const formattedResp = data.replace(/\s+/g, "").toUpperCase();
 
