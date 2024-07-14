@@ -1,3 +1,11 @@
+const serialPort = new BSSerialPort(2);
+serialPort.SetBaudRate(38400);
+serialPort.SetDataBits(8);
+serialPort.SetStopBits(1);
+serialPort.SetParity("none");
+serialPort.SetLineEnding("\r");
+serialPort.SetGenerateLineEvent(true);
+
 function main() {
   const speedGuageSize = document.getElementById("speed").getAttribute("data-width");
   const rpmGuageSize = document.getElementById("rpm").getAttribute("data-width");
@@ -222,7 +230,7 @@ function main() {
         console.log("Command code does not match any known delimiter");
       }
     } else {
-      console.log("Response does not start with '41', ignoring.");
+      //console.log("Response does not start with '41', ignoring.");
     }
   };
 
@@ -265,9 +273,19 @@ function main() {
     isWriting = false;
   }
 
-  setInterval(() => {
-    writeCommandsSequentially();
-  }, 5000);
+  //  setInterval(() => {
+  //    writeCommandsSequentially();
+  //  }, 5000);
+}
+
+function testPID(pid) {
+  serialPort.SendBytes(pid + "\r", (err) => {
+    if (err) {
+      console.error(`Error sending ${pid}:`, err);
+    } else {
+      console.log(`${pid} command sent successfully.`);
+    }
+  });
 }
 
 window.main = main;
