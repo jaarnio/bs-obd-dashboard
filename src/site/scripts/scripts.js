@@ -161,13 +161,6 @@ function main() {
     valueDec: 0,
   }).draw();
 
-  const serialPort = new BSSerialPort(2);
-  serialPort.SetBaudRate(10400);
-  serialPort.SetDataBits(8);
-  serialPort.SetStopBits(1);
-  serialPort.SetParity("none");
-  serialPort.SetLineEnding("\r");
-  serialPort.SetGenerateLineEvent(true);
   serialPort.onserialline = function (e) {
     let data = e.sdata;
     console.log(typeof data, "Data:", data);
