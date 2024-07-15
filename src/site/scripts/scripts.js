@@ -217,8 +217,8 @@ function main() {
 
             // Keep the higher of the two temperatures
             //let temp = Math.max(tempF1, tempF2);
-            tempGauge.value = temp1;
-            console.log(`Temperature: ${temp1}°C`);
+            tempGauge.value = tempF1;
+            console.log(`Temperature: ${tempF1}°C`);
             break;
           case "42": // Voltage
             console.log(`Voltage: ${parseInt(value, 16) / 1000}V`);
