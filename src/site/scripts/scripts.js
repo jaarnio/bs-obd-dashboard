@@ -268,14 +268,14 @@ function main() {
           console.log(`${value} command sent successfully.`);
         }
       });
-      await pause(1000); // Wait for 300ms before sending the next command
+      await pause(100); // Wait for 300ms before sending the next command
     }
     isWriting = false;
   }
 
-  //  setInterval(() => {
-  //    writeCommandsSequentially();
-  //  }, 5000);
+  setInterval(() => {
+    writeCommandsSequentially();
+  }, 500);
 }
 
 function testPID(pid) {
