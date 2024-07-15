@@ -206,19 +206,19 @@ function main() {
             speedGauge.value = speedMPH;
             console.log(`Speed: ${speedMPH} mph`);
             break;
-          case "67": // Temperature
+          case "05": // Temperature
             // Split the last 4 characters into two pairs
             const temp1 = parseInt(value.substring(0, 2), 16);
-            const temp2 = parseInt(value.substring(2, 4), 16);
+            //const temp2 = parseInt(value.substring(2, 4), 16);
 
             // Convert each hex value to an integer, subtract 40 to get the value in Celsius, and convert to Fahrenheit
             const tempF1 = Math.round((temp1 - 40) * 1.8 + 32);
-            const tempF2 = Math.round((temp2 - 40) * 1.8 + 32);
+            //const tempF2 = Math.round((temp2 - 40) * 1.8 + 32);
 
             // Keep the higher of the two temperatures
-            let temp = Math.max(tempF1, tempF2);
-            tempGauge.value = temp;
-            console.log(`Temperature: ${temp}°C`);
+            //let temp = Math.max(tempF1, tempF2);
+            tempGauge.value = temp1;
+            console.log(`Temperature: ${temp1}°C`);
             break;
           case "42": // Voltage
             console.log(`Voltage: ${parseInt(value, 16) / 1000}V`);
@@ -237,7 +237,7 @@ function main() {
   const variables = [
     { command: "obdSpeed", value: "010D" },
     { command: "obdRPM", value: "010C" },
-    { command: "obdTemperature", value: "0167" },
+    { command: "obdTemperature", value: "0105" },
     { command: "obdFuel", value: "012F" },
   ];
 
@@ -246,7 +246,7 @@ function main() {
     { name: "Fuel", delimiter: "2F", length: 2 },
     { name: "RPM", delimiter: "0C", length: 4 },
     { name: "Speed", delimiter: "0D", length: 2 },
-    { name: "Temperature", delimiter: "67", length: 6 },
+    { name: "Temperature", delimiter: "05", length: 2 },
     { name: "Voltage", delimiter: "42", length: 4 },
   ];
 
